@@ -1,0 +1,498 @@
+abbrev.	abbreviation (of)
+abl.	ablative
+absol.	absolute
+Abstr.	Abstract
+acc.	accusative
+Acct.	Account
+A.D.	Anno_Domini
+ad.		adaptation of
+Add.	Addenda
+adj.	adjective
+Adv.	Advance 
+adv.	adverb
+advb.	adverbial 
+Advt.	advertisement
+Aeronaut.	(as label) in Aeronautics; Aeronautic  
+AF. AFr.	Anglo-French
+Afr.	Africa 
+Agric.	(as label) in Agriculture; Agriculture - al
+Alb.	Albanian
+Amer.	American
+Amer. Ind.	American Indian
+Anat.	(as label) in Anatomy; Anatomy - ical
+Anc.	Ancient
+Anglo-Ind.	Anglo-Indian
+Anglo-Ir.	Anglo-Irish
+Ann.	Annals
+Anthrop. Anthropol.	(as label) in Anthropology; Anthropology -ical
+Antiq.	(as label) in Antiquities; Antiquity
+aphet.	aphetic aphetized
+app.	apparently
+Appl.	Applied
+Applic.	Application 
+appos.	appositive 
+Arab.	Arabic
+Aram.	Aramaic
+Arch.	(as label) in Architecture; Architecture 
+Arm.	Armenian
+assoc.	association
+Astr.	in Astronomy
+Astrol.	in Astrology
+Astron.	Astronomy -ical
+Astronaut.	Astronautic 
+attrib.	attributive 
+Austral.	Australian
+Autobiogr.	Autobiography -ical
+A.V.	Authorized Version
+B.C.	Before Christ
+B.C.	British Columbia
+bef.	before
+Bibliogr.	(as label) in Bibliography; Bibliography -ical
+Biochem.	(as label) in Biochemistry; Biochemistry -ical
+Biol.	(as label) in Biology; Biology - ical
+Bk.	Book
+Bot. (as label) in Botany; Botany -ical Bp.	Bishop
+Brit.	Britain British
+Bulg.	Bulgarian
+Bull.	Bulletin
+c (as c 1700)	circa 'about'
+c. (as 19th c.)	century
+Cal.	Calendar
+Cambr.	Cambridge
+Canad.	Canadian
+Cat.	Catalan
+catachr.	catachrestically
+Catal.	Catalogue
+Celt.	Celtic
+Cent.	Century Central
+Cent. Dict.	Century Dictionary
+Cf. cf.	confer 'compare'
+Ch.	Church
+Chem.	(as label) in Chemistry; Chemistry - ical
+Chr.	Christian
+Chron.	Chronicle
+Chronol.	Chronology -ical
+Cinemat. Cinematogr.	in Cinematography
+Clin.	Clinical
+cl. L.	classical Latin
+cogn. w.	cognate with
+Col.	Colonel Colony
+Coll.	Collection
+collect.	collective 
+colloq.	colloquial 
+comb.	combined -ing
+Comb.	Combinations
+Comm.	in Commercial usage
+Communic.	in Communications
+comp.	compound composition
+Compan.	Companion
+compar.	comparative
+compl.	complement
+Compl.	Complete
+Conc.	Concise
+Conch.	in Conchology
+concr.	concrete 
+Conf.	Conference
+Congr.	Congress
+conj.	conjunction
+cons.	consonant
+const.	construction construed with
+contr.	contrast (with)
+Contrib.	Contribution
+Corr.	Correspondence
+corresp.	corresponding (to)
+Cotgr.	R. Cotgrave Dictionarie of the French and English tongues
+cpd.	compound
+Crit.	criticism critical
+Cryst.	in Crystallography
+Cycl.	Cyclopaedia -ic
+Cytol.	Cytology -ical
+Da.	Danish
+D.A.	Dictionary of Americanisms
+D.A.E.	Dictionary of American English
+dat.	dative
+D.C.	District of Columbia
+Deb.	Debate 
+def.	definite -ition
+dem.	demonstrative
+deriv.	derivative -ation
+derog.	derogatory
+Descr.	Description -tive
+Devel.	Development 
+Diagn.	Diagnosis Diagnostic
+dial.	dialect 
+Dict.	dictionary; spec. the Oxford English Dictionary
+dim.	diminutive
+Dis.	Disease
+Diss.	Dissertation
+D.O.S.T.	Dictionary of the Older Scottish Tongue
+Du.	Dutch
+E.	East
+Eccl.	(as label) in Ecclesiastical usage; Ecclesiastical
+Ecol.	in Ecology
+Econ.	(as label) in Economics; Economy - ics
+ed.	edition
+E.D.D.	English Dialect Dictionary
+Edin.	Edinburgh
+Educ.	(as label) in Education; Education - al
+EE.	Early English
+e.g.	exempli gratia 'for example'
+Electr.	(as label) in Electricity; Electricity - ical
+Electron.	Electronic 
+Elem.	Element -ary
+ellipt.	elliptical 
+Embryol.	in Embryology
+e.midl.	east midland (dialect)
+Encycl.	Encyclopaedia -ic
+Eng.	England English
+Engin.	in Engineering
+Ent.	in Entomology
+Entomol.	Entomology -logical
+erron.	erroneous 
+esp.	especially
+Ess.	Esssay 
+et al.	et alii 'and others'
+etc.	et cetera
+Ethnol.	in Ethnology
+etym.	etymology
+euphem.	euphemistically
+Exam.	Examination
+exc.	except
+Exerc.	Exercise 
+Exper.	Experiment 
+Explor.	Exploration 
+f.		formed on
+F.		French
+fem.	feminine
+fig.	figurative 
+Finn.	Finnish
+fl.	floruit 'flourished'
+Found.	Foundation 
+Fr.	French
+freq.	frequent 
+Fris.	Frisian
+Fund.	Fundamental 
+G.	German
+Gael.	Gaelic
+Gaz.	Gazette
+gen.	genitive
+gen.	general 
+Geogr.	(as label) in Geography; Geography - ical
+Geol.	(as label) in Geology; Geology - ical
+Geom.	in Geometry
+Geomorphol.	in Geomorphology
+Ger.	German
+Gloss.	Glossary
+Gmc.	Germanic
+Godef.	F. Godefroy Dictionnaire de l'ancienne langue francaise
+Goth.	Gothic
+Govt.	Government
+Gr.	Greek
+Gr.	Great
+Gram.	Grammar
+Gt.	Great
+Heb.	Hebrew
+Her.	in Heraldry
+Herb.	among herbalists
+Hind.	Hindustani
+hist.	historical
+Househ.	Household
+Housek.	Housekeeping
+Ibid.	Ibidem 'in the same book or passage'
+Icel.	Icelandic
+i.e.	that_ is
+IE.		Indo-European
+imit.	imitative
+imp.	imperative
+impers.	impersonal
+impf.	imperfect
+ind.	indicative
+indef.	indefinite
+Industr.	Industry -ial
+inf.	infinitive
+infl.	influenced
+Inorg.	Inorganic
+Ins.	Insurance
+Inst.	Institute -tion
+int.	interjection
+intr.	intransitive
+Introd.	Introduction
+Ir.	Irish
+irreg.	irregular 
+It.	Italian
+J. (J.)	(quoted from) Johnson's Dictionary
+(Jam.)	Jamieson Scottish Dict.
+Jap.	Japanese
+joc.	jocular 
+Jrnl.	Journal
+Jun.	Junior
+K
+Knowl.	Knowledge
+L
+l.	line
+L.	Latin
+lang.	language
+Lect.	Lecture 
+Less.	Lesson 
+Let. Lett.	letter letters
+LG.	Low German
+lit.	literal 
+Lit.	Literary
+Lith.	Lithuanian
+LXX	Septuagint
+M
+m.	masculine
+Mag.	Magazine
+Magn.	Magnetic -ism
+Mal.	Malay Malayan
+Man.	Manual
+Managem.	Management
+Manch.	Manchester
+Manuf.	in Manufacture -ing
+Mar.	Marine
+masc. (rarely m.)	masculine
+Math.	(as label) in Mathematics; Mathematics 
+MDu.	Middle Dutch
+ME.	Middle English
+Mech.	(as label) in Mechanics; Mechanics - al
+Med.	(as label) in Medicine; Medicine - ical
+med.L.	medieval Latin
+Mem.	Memoir 
+Mataph.	in Metaphysics
+Meteorol.	(as label) in Meteorology; Meteorology -ical
+MHG.	Middle High German
+midl.	midland (dialect)
+Mil.	in military usage
+Min.	(as label) in Mineralogy; Mineralogy - ical
+Mineral.	Mineralogy -ical
+MLG.	Middle Low German
+Mics.	Miscellany -eous
+mod.	modern
+mod.L.	modern Latin
+(Morris)	(quoted from) E. E. Morris's Austral English
+Mus.	(as label) in Music; Music ; Museum
+Myst.	Mystery
+Mythol.	in Mythology
+N
+N.	North
+n.	neuter
+N.Amer.	North America 
+N.&Q.	Notes and Queries
+Narr.	Narrative
+Nat.	Natural
+Nat. Hist.	in Natural History
+Naut.	in nautical language
+N.E.	North East
+N.E.D.	New English Dictionary original title of the Oxford English
+Dictionary (first edition) Neurol.	in Neurology
+neut. (rarely n.)	neuter
+NF. NFr.	Northern French
+No.	Number
+nom.	nominative
+north.	northern dialect
+Norw.	Norwegian
+n.q.	no quotations
+N.T.	New Testament
+Nucl.	Nuclear
+Numism.	in Numismatics
+N.W.	North West
+N.Z.	New Zealand
+O
+obj.	object
+obl.	oblique
+Obs. obs.	obsolete
+Obstetr.	Obstetric
+occas.	occasionally
+OE.	Old English (= Angloaxon)
+OF. OFr.	Old French
+OFris.	Old Frisian
+OHG.	Old High German
+OIr.	Old Irish
+ON.	Old Norse
+ONF.	Old Northern French
+Ophthalm.	in Ophthalmology
+opp.	opposed (to) the opposite (of)
+Opt.	in Optics
+Org.	Organic
+orig.	origin  ly
+Ornith.	(as label) in Ornithology; Ornithology -ical
+OS.	Old Saxon
+OSl.	Old (Church) Slavonic
+O.T.	Old Testament
+Outl.	Outline
+Oxf.	Oxford
+p.	page
+Palaeogr.	in Palaeography
+Palaeont. in Palaeontology; Palaeontology -ical pa. pple.	passive participle past participle
+(Partridge)	(quoted from) E. Partridge's Dictionary of Slang and
+Unconventional English pass.	passive 
+pa.t.	past tense
+Path.	(as label) in Pathology; Pathology - ical
+perh. perhaps Pers.	Persian
+pers.	person 
+Petrogr.	in Petrography
+Petrol.	(as label) in Petrology; Petrology - ical
+(Pettman)	(quoted from) C. Pettman's Africanderisms
+pf.	perfect
+Pg.	Portuguese
+Pharm.	in Pharmacology
+Philol.	(as label) in Philology; Philology - ical
+Philos.	(as label) in Philosophy; Philosophy - ic
+phonet.	phonetic ly
+Photogr.	(as label) in Photography; Photography -ical
+phr.	phrase
+Phys.	physical; (rarely) in Physiology
+Physiol.	(as label) in Physiology; Physiology -ical
+Pict.	Picture Pictorial
+pl. plur.	plural
+poet.	poetic 
+Pol.	Polish
+Pol.	(as label) in Politics; Politics - al
+Pol. Econ.	in Political Economy
+Polit.	Politics 
+pop.	popular 
+Porc.	Porcelain
+poss.	possessive
+Pott.	Pottery
+ppl. a. pple. adj.	participial adjective
+pple.	participle
+Pr.	Provencal
+pr.	present
+Pract.	Practice 
+prec.	preceding (word or article)
+pred.	predicative
+pref.	prefix
+pref. Pref.	preface
+prep.	preposition
+pres.	present
+Princ.	Principle 
+priv.	privative
+prob.	probably
+Probl.	Problem
+Proc.	Proceedings
+pron.	pronoun
+pronunc.	pronunciation
+prop.	properly
+Pros.	in Prosody
+Prov.	Provencal
+pr. pple.	present participle
+Psych.	in Psychology
+Psychol.	(as label) in Psychology; Psychology -ical
+Publ.	Publications
+Q.	Quarterly
+quot(s).	quotation(s)
+q.v.	quod vide 'which see'
+R.	Royal
+Radiol.	in Radiology
+R.C.Ch.	Roman Catholic Church
+Rec.	Record
+redupl.	reduplicating
+Ref.	Reference
+refash.	refashioned -ing
+refl.	reflexive
+Reg.	Register
+reg.	regular
+rel	related to
+Reminisc.	Reminiscence 
+Rep.	Report 
+repr.	representative representing
+Res.	Research
+Rev.	Review
+rev.	revised
+Rhet.	in Rhetoric
+Rom.	Roman -ce -ic
+Rum.	Rumanian
+Russ.	Russian
+S.	South
+S.Afr.	South Africa 
+sb.	substantive
+sc.	scilicet 'understand' or 'supply'
+Sc. Scot.	Scottish
+Scand.	Scandinavia 
+Sch.	School
+Sc. Nat. Dict.	Scottish National Dictionary
+Scotl.	Scotland
+Sel.	Selection 
+Ser.	Series
+sing.	singular
+Sk.	Sketch
+Skr.	Sanskrit
+Slav.	Slavonic
+S.N.D.	Scottish National Dictionary
+Soc.	Society
+Sociol.	(as label) in Sociology; Sociology - ical
+Sp.	Spanish
+Sp.	Speech -es
+sp.	spelling
+spec.	specifically
+Spec.	Specimen
+St.	Saint
+Stand.	Standard
+Stanf.	(quoted from) Stanford Dictionary of Anglicised Words & Phrases
+str.	strong
+Struct.	Structure 
+Stud.	Studies
+subj.	subject
+subord. cl.	subordinate clause
+subseq.	subsequent 
+subst.	substantively
+suff.	suffix
+superl.	superlative
+Suppl.	Supplement
+Surg.	(as label) in Surgery; Surgery Surgical
+s.v.	sub voce 'under the word'
+Sw.	Swedish
+s.w.	south-western (dialect)
+Syd. Soc. Lex.	Sydenham Society Lexicon of Medicine & Allied Sciences
+syll.	syllable
+Syr.	Syrian
+Syst.	System -atic
+Taxon.	Taxonomy -ical
+techn.	technical 
+Technol.	Technology -ical
+Telegr.	in Telegraphy
+Teleph.	in Telephony
+(Th.)	(quoted from) Thornton's American Glossary
+Theatr.	in the Theatre theatrical
+Theol.	(as label) in Theology; Theology - ical
+Theoret.	Theoretical
+Tokh.	Tokharian
+tr. transl.	translated translation
+Trans.	Transactions
+trans.	transitive
+transf.	transferred sense
+Trav.	Travel(s)
+Treas.	Treasury
+Treat.	Treatise
+Treatm.	Treatment
+Trig.	in Trigonometry
+Trop.	Tropical
+Turk.	Turkish
+Typog. Typogr.	in Typography
+ult.	ultimately
+Univ.	University
+unkn.	unknown
+U.S.	United States
+U.S.S.R.	Union of Soviet Socialist Republics
+usu.	usually
+v. vb.	verb
+var(r). vars.	variant(s) of
+vbl. sb.	verbal substantive
+Vertebr.	Vertebrate 
+Vet.	(as label) in Veterinary Science; Veterinary
+Vet. Sci.	in Veterinary Science
+viz.	videlicet 'namely'
+Voy.	Voyage 
+v.str.	strong verb
+vulg.	vulgar
+v.w.	weak verb
+W.	Welsh; West
+wd.	word
+1Westm.	Westminster
+WGmc.	West_Germanic
+Wks.	Works
+w.midl.	west_midland
+WS.	West_Saxon
+Yrs.	Years
+Zoogeogr.	Zoogeography
+Zool.	Zoology
