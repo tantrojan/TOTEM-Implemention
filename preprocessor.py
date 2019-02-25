@@ -10,7 +10,8 @@ class Preprocessor(object):
 	def __init__(self):
 		super().__init__()
 		self.slang_dictionary = {}
-
+		self.sentence = ''
+		self.token = []
 		# Creating Slang Dictionary
 		csvfile = open('./Slang Words/noslang.csv','r')
 		reader = csv.reader(csvfile)
@@ -34,12 +35,13 @@ class Preprocessor(object):
 		exclude = set(string.punctuation)
 		self.sentence = ''.join(ch for ch in self.sentence if ch not in exclude)
 
+		# Remove slangs
 		self.replace_slangs()
 
+		# Removes Spaces
+		self.sentence = " ".join(self.sentence.split())
 		# Tokenize
-		tokens = word_tokenize(self.sentence)
-		del self.sentence
-		return tokens
+		self.tokens = word_tokenize(self.sentence)
 
 	def url_remover(self):
 		self.sentence = re.sub(r'''(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))''', '', self.sentence)
@@ -75,7 +77,7 @@ class Preprocessor(object):
 		for word in word_tokenize(self.sentence):
 			# print(word)
 			if word in self.slang_dictionary:
-				print(self.slang_dictionary[word])
+				# print(self.slang_dictionary[word])
 				self.sentence = re.sub(r'\b'+word+r'\b', self.slang_dictionary[word],self.sentence)
 		
 
