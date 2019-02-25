@@ -1,5 +1,6 @@
 import sys
 from preprocessor import Preprocessor
+from postprocessor import Postprocessor
 from nltk.tokenize import sent_tokenize
 
 
@@ -13,6 +14,7 @@ class Totem(object):
 
 	def __call__(self):
 		self.preprocess_doc()
+		self.postprocess_doc()
 
 	def preprocess_doc(self):
 
@@ -21,13 +23,18 @@ class Totem(object):
 
 		self.sentences = data.split('\n')
 		self.sentences = [x for x in self.sentences if len(x)>15]
-		print(self.sentences)
+		# print(self.sentences)
 
 		preprocessor = Preprocessor()
 		for i,sent in enumerate(self.sentences):
-			preprocessor.clean(sent)
+			preprocessor(sent)
 			self.sentences[i]=preprocessor.sentence;
 			self.bag_of_words.append(preprocessor.tokens)
+
+	def postprocess_doc(self):
+		postprocessor = Postprocessor()
+		postprocessor(self.sentences)
+
 
 
 def main():

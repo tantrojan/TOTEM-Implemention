@@ -7,19 +7,17 @@ import csv
 
 class Preprocessor(object):
 
-	def __init__(self):
-		super().__init__()
-		self.slang_dictionary = {}
-		self.sentence = ''
-		self.token = []
-		# Creating Slang Dictionary
-		csvfile = open('./Slang Words/noslang.csv','r')
-		reader = csv.reader(csvfile)
-		for row in reader:
-			self.slang_dictionary[str(row[0])] = str(row[1])
+	slang_dictionary = {}
+	csvfile = open('./Slang Words/noslang.csv','r')
+	reader = csv.reader(csvfile)
+	for row in reader:
+		slang_dictionary[str(row[0])] = str(row[1])
+	
+	sentence = ''
+	tokens = []
 	
 	# URLs are removed, Removing special characters which has different accent and emoticons, non-printable ASCII characters are removed. The cleaned text is tokenized.
-	def clean(self, sentence):
+	def __call__(self, sentence):
 		self.sentence = sentence
 
 		# Removers
