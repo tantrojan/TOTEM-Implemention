@@ -17,21 +17,35 @@ class Postprocessor(object):
 	def __call__(self, document):
 
 		sentences_words = []
+		bag_of_words = {}
 		for sent in document:
 			words = []
 			for w in word_tokenize(sent):
 				if w not in stop_words:
 					words.append(w)
+					if w not in bag_of_words:
+						bag_of_words[w]=1
+					else:
+						bag_of_words[w]+=1
 			sentences_words.append(words)
+
+		bag_of_words = dict(sorted(bag_of_words.items(), key=lambda x: x[1], reverse = True))
 
 		tf_metrics = self._compute_tf(sentences_words)
 		idf_metrics = self._compute_idf(sentences_words)
 
 		matrix = self._create_matrix(sentences_words, self.threshold, tf_metrics, idf_metrics)
-		scores = self.power_method(matrix, self.epsilon)
+		
 
-		ratings = dict(zip(document, scores))
-		print(ratings)
+		score_centroid = self.power_method(matrix, self.epsilon)
+		score_word_rank = self.word_rank(bag_of_words,sentences_words)
+		score_word_freq = self.word_freq(bag_of_words,sentences_words)
+
+
+		
+		print(score_centroid)
+		print(score_word_rank)
+		print(score_word_freq)
 
 
 
@@ -92,7 +106,7 @@ class Postprocessor(object):
 	                degrees[row] = 1
 
 	            matrix[row][col] = matrix[row][col] / degrees[row]
-	    print(matrix)
+
 	    return matrix
 
 	@staticmethod
@@ -125,5 +139,40 @@ class Postprocessor(object):
 	        lambda_val = numpy.linalg.norm(numpy.subtract(next_p, p_vector))
 	        p_vector = next_p
 
-	    return p_vector
+	    return list(p_vector)
+		
+	@staticmethod
+	def word_rank(bag_of_words,sentences_words):
+
+		bag_of_words =list(bag_of_words)
+		V = len(bag_of_words)
+		score_word_rank = []
+		for sent in sentences_words:
+			K = len(sentences_words)
+			value = 0
+			for word in sent:
+				value += (V - bag_of_words.index(word) + 1)
+			value = value/K
+			score_word_rank.append(value)
+
+		return score_word_rank
+
+
+	@staticmethod
+	def word_freq(bag_of_words,sentences_words):
+
+		Max_word_freq = bag_of_words[list(bag_of_words)[0]]
+		score_word_freq = []
+		for sent in sentences_words:
+			K = len(sentences_words)
+			value = 0
+			for word in sent:
+				value += (Max_word_freq - bag_of_words[word])
+			value = value/K
+			score_word_freq.append(value)
+
+		return score_word_freq
+
+
+
 		
