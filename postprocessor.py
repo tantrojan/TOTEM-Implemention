@@ -13,6 +13,9 @@ class Postprocessor(object):
 
 	def __init__(self):
 		super(Postprocessor, self).__init__()
+		self.score_centroid = []
+		self.score_word_rank = []
+		self.score_word_freq = []
 
 	def __call__(self, document):
 
@@ -37,16 +40,9 @@ class Postprocessor(object):
 		matrix = self._create_matrix(sentences_words, self.threshold, tf_metrics, idf_metrics)
 		
 
-		score_centroid = self.power_method(matrix, self.epsilon)
-		score_word_rank = self.word_rank(bag_of_words,sentences_words)
-		score_word_freq = self.word_freq(bag_of_words,sentences_words)
-
-
-		
-		print(score_centroid)
-		print(score_word_rank)
-		print(score_word_freq)
-
+		self.score_centroid = self.power_method(matrix, self.epsilon)
+		self.score_word_rank = self.word_rank(bag_of_words,sentences_words)
+		self.score_word_freq = self.word_freq(bag_of_words,sentences_words)
 
 
 	def _compute_tf(self, sentences):
@@ -155,6 +151,10 @@ class Postprocessor(object):
 			value = value/K
 			score_word_rank.append(value)
 
+		# Normalizing (Converting in range 0 and 1)
+		max_result = max(score_word_rank)
+		score_word_rank = [x/max_result for x in score_word_rank]
+
 		return score_word_rank
 
 
@@ -170,6 +170,10 @@ class Postprocessor(object):
 				value += (Max_word_freq - bag_of_words[word])
 			value = value/K
 			score_word_freq.append(value)
+
+		# Normalizing (Converting in range 0 and 1)
+		max_result = max(score_word_freq)
+		score_word_freq = [x/max_result for x in score_word_freq]
 
 		return score_word_freq
 

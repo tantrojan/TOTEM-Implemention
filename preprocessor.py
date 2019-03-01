@@ -20,6 +20,14 @@ class Preprocessor(object):
 	def __call__(self, sentence):
 		self.sentence = sentence
 
+		# Count Hashtags
+		hash_words = re.findall(r"#(\w+)", self.sentence)
+		self.hash_count = len(hash_words)
+
+		# Remove the @username and rt
+		self.sentence = re.sub(r"@(\w+)", '', self.sentence)
+		self.sentence = re.sub(r"\bRT\b", '', self.sentence)
+
 		# Removers
 		self.url_remover()
 		self.accent_remover()
