@@ -1,5 +1,6 @@
 import sys
 from preprocessor import Preprocessor
+from topic_modeler import Topic_modeler
 from postprocessor import Postprocessor
 from nltk.tokenize import sent_tokenize
 
@@ -11,7 +12,7 @@ class Totem(object):
 		self.filename = document
 		self.sentences = []
 		self.preprocessed_sentences = []
-		self.bag_of_words = []
+		self.list_of_tokens = []
 		self.hash_counts = []
 		self.score_centroid = []
 		self.score_word_rank = []
@@ -20,6 +21,9 @@ class Totem(object):
 
 	def __call__(self):
 		self.preprocess_doc()
+		# print(self.list_of_tokens)
+		topic_modeler = Topic_modeler()
+		topic_modeler(self.list_of_tokens)
 		self.postprocess_doc()
 		self.scoring()
 
@@ -36,7 +40,7 @@ class Totem(object):
 		for i,sent in enumerate(self.sentences):
 			preprocessor(sent)
 			self.preprocessed_sentences.append(preprocessor.sentence)
-			self.bag_of_words.append(preprocessor.tokens)
+			self.list_of_tokens.append(preprocessor.tokens)
 			self.hash_counts.append(preprocessor.hash_count)
 
 		# Normalizing (Converting in range 0 and 1)

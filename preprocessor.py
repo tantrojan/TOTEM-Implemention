@@ -2,6 +2,7 @@ import string
 import re
 import unicodedata
 from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer 
 from string import punctuation
 import csv
 
@@ -20,7 +21,7 @@ class Preprocessor(object):
 	def __call__(self, sentence):
 		self.sentence = sentence
 
-		# Count Hashtags
+		# Count Hashtags 
 		hash_words = re.findall(r"#(\w+)", self.sentence)
 		self.hash_count = len(hash_words)
 
@@ -47,7 +48,11 @@ class Preprocessor(object):
 		# Removes Spaces
 		self.sentence = " ".join(self.sentence.split())
 		# Tokenize
-		self.tokens = word_tokenize(self.sentence)
+
+		# Removing Stopwords and Stemming 
+		lemmatizer = WordNetLemmatizer() 
+		stopped_tokens = word_tokenize(self.sentence)
+		self.tokens = [lemmatizer.lemmatize(i) for i in stopped_tokens]
 
 	def url_remover(self):
 		self.sentence = re.sub(r'''(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))''', '', self.sentence)
