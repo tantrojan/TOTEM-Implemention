@@ -11,21 +11,36 @@ class Totem(object):
 		super(Totem, self).__init__()
 		self.filename = document
 		self.sentences = []
+
+		# Preprocessed Document
 		self.preprocessed_sentences = []
 		self.list_of_tokens = []
+
+		# Topicwise divided Document
+		self.document_topicwise = {}
+
+		# Scoring Parameters
 		self.hash_counts = []
 		self.score_centroid = []
 		self.score_word_rank = []
 		self.score_word_freq = []
-		self.total_score = []
 
 	def __call__(self):
+
+		# Preprocessing the complete Document
 		self.preprocess_doc()
-		# print(self.list_of_tokens)
+
+		# Topic Modelling
 		topic_modeler = Topic_modeler()
-		topic_modeler(self.list_of_tokens)
-		self.postprocess_doc()
-		self.scoring()
+		self.document_topicwise = topic_modeler(self.preprocessed_sentences, self.list_of_tokens)
+		
+
+		# Postprocessing and Scoring for each topic separately
+		for i in self.document_topicwise:
+			self.postprocess_doc(self.document_topicwise[i])
+			print("Scoring for Topic {}".format(i))
+			self.scoring(self.document_topicwise[i])
+			print("\n\n")
 
 	def preprocess_doc(self):
 
@@ -48,20 +63,22 @@ class Totem(object):
 		self.hash_counts = [x/max_result for x in self.hash_counts]
 
 
-	def postprocess_doc(self):
+	def postprocess_doc(self, topic_document):
 
 		postprocessor = Postprocessor()
-		postprocessor(self.sentences)
+		postprocessor(topic_document)
 		self.score_centroid = postprocessor.score_centroid 
 		self.score_word_rank = postprocessor.score_word_rank
 		self.score_word_freq = postprocessor.score_word_freq
 
-	def scoring(self):
+	def scoring(self, topic_document):
+
+		total_score = []
 
 		for i in range(len(self.score_word_rank)):
-			self.total_score.append(self.score_centroid[i] + self.score_word_rank[i] + self.score_word_freq[i] + self.hash_counts[i])
+			total_score.append(self.score_centroid[i] + self.score_word_rank[i] + self.score_word_freq[i] + self.hash_counts[i])
 
-		ranking = sorted(list(zip(self.sentences,self.total_score)), key = lambda x : x[1], reverse = True)
+		ranking = sorted(list(zip(topic_document, total_score)), key = lambda x : x[1], reverse = True)
 
 		for i in ranking:
 			print(i)
