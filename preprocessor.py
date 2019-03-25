@@ -27,6 +27,7 @@ class Preprocessor(object):
 
 		# Remove the @username and rt
 		self.sentence = re.sub(r"@(\w+)", '', self.sentence)
+		self.sentence = re.sub(r"#(\w+)", '', self.sentence)
 		self.sentence = re.sub(r"\bRT\b", '', self.sentence)
 
 		# Removers
@@ -43,7 +44,7 @@ class Preprocessor(object):
 		self.sentence = ''.join(ch for ch in self.sentence if ch not in exclude)
 
 		# Remove slangs
-		self.replace_slangs()
+		# self.replace_slangs()
 
 		# Removes Spaces
 		self.sentence = " ".join(self.sentence.split())
@@ -90,6 +91,3 @@ class Preprocessor(object):
 			if word in self.slang_dictionary:
 				# print(self.slang_dictionary[word])
 				self.sentence = re.sub(r'\b'+word+r'\b', self.slang_dictionary[word],self.sentence)
-		
-
-

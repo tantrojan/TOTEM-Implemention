@@ -176,7 +176,3 @@ class Postprocessor(object):
 		score_word_freq = [x/max_result for x in score_word_freq]
 
 		return score_word_freq
-
-
-
-		

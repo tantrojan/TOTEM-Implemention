@@ -3,14 +3,15 @@ from preprocessor import Preprocessor
 from topic_modeler import Topic_modeler
 from postprocessor import Postprocessor
 from nltk.tokenize import sent_tokenize
-
+import time
 
 class Totem(object):
 	"""docstring for Totem"""
-	def __init__(self, document):
+	def __init__(self, document, output_file):
 		super(Totem, self).__init__()
 		self.filename = document
 		self.sentences = []
+		self.output_file = output_file
 
 		# Preprocessed Document
 		self.preprocessed_sentences = []
@@ -24,6 +25,7 @@ class Totem(object):
 		self.score_centroid = []
 		self.score_word_rank = []
 		self.score_word_freq = []
+		self.ranking = []
 
 	def __call__(self):
 
@@ -38,9 +40,8 @@ class Totem(object):
 		# Postprocessing and Scoring for each topic separately
 		for i in self.document_topicwise:
 			self.postprocess_doc(self.document_topicwise[i])
-			print("Scoring for Topic {}".format(i))
 			self.scoring(self.document_topicwise[i])
-			print("\n\n")
+			self.generate_summary()
 
 	def preprocess_doc(self):
 
@@ -60,6 +61,8 @@ class Totem(object):
 
 		# Normalizing (Converting in range 0 and 1)
 		max_result = max(self.hash_counts)
+		if max_result == 0:
+			max_result=1
 		self.hash_counts = [x/max_result for x in self.hash_counts]
 
 
@@ -78,25 +81,38 @@ class Totem(object):
 		for i in range(len(self.score_word_rank)):
 			total_score.append(self.score_centroid[i] + self.score_word_rank[i] + self.score_word_freq[i] + self.hash_counts[i])
 
-		ranking = sorted(list(zip(topic_document, total_score)), key = lambda x : x[1], reverse = True)
+		self.ranking = sorted(list(zip(topic_document, total_score)), key = lambda x : x[1], reverse = True)
 
-		for i in ranking:
-			print(i)
+	def generate_summary(self):
+		file = open(self.output_file,'a')
+		for i in range(4):
+			file.write(self.ranking[i][0] + '\n')
+
+		file.close()
+
 		
 
 
 def main():
+	print('Start')
+	start_time = time.time()
 	program_name = sys.argv[0]
 	arguments = sys.argv[1:]
 	
-	if len(arguments) != 1:
+	if len(arguments) != 2:
 		print("Invalid number of arguments. Exiting.")
 		sys.exit()
 
 	document = arguments[0]
-	summarizer = Totem(document)
+	output_file = arguments[1]
+	# print(output_file)
+
+	summarizer = Totem(document, output_file)
 	summarizer()
-	
+
+	elapsed_time = time.time() - start_time
+	print('End')
+	print('Time Elapsed : {}'.format(elapsed_time))
 
 
 
