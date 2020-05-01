@@ -6,7 +6,8 @@ class Topic_modeler(object):
 		super(Topic_modeler, self).__init__()
 		self.no_of_topics = 5
 
-	def __call__(self, document, document_token):
+	def __call__(self, document, document_token, topics):
+		self.no_of_topics = topics
 
 		dictionary = corpora.Dictionary(document_token)
 		# print(dictionary.token2id)
